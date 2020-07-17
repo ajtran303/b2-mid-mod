@@ -36,7 +36,7 @@ RSpec.describe "Mechanic Show Page Spec" do
 
     describe "After I fill out a form to add a ride to their workload" do
       it "I see the name of that newly added ride on this mechanics show page" do
-        fill_in :add_ride, with: @great_bear.id
+        fill_in :ride_id, with: @great_bear.id
         click_button "Submit"
 
         expect(current_path).to eq("/mechanics/#{@kara.id}")
