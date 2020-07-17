@@ -6,4 +6,8 @@ class Ride < ApplicationRecord
   def self.alphabetical_names
     self.order(:name).pluck(:name)
   end
+
+  def self.average_thrill_rating
+    self.average(:thrill_rating)
+  end
 end
