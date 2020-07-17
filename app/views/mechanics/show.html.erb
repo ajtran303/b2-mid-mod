@@ -1,0 +1,13 @@
+<%= tag.h1 "Mechanic: #{@mechanic.name}" %>
+<%= tag.h2 "Years of Experience: #{@mechanic.years_of_experience}" %>
+<%= tag.h3 "Current rides they’re working on:" %>
+<% @mechanic.rides_in_workload.each do |ride| %>
+<%= tag.h3 ride %>
+<% end %>
+
+
+<%= form_tag "/ride_mechanics/#{@mechanic.id}", method: :post do %>
+<%= label_tag "Add Ride ID" %>
+<%= text_field_tag :ride_id %>
+<%= submit_tag "Submit" %>
+<% end %>
