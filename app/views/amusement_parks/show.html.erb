@@ -1,0 +1,8 @@
+<%= tag.h1 @amusement_park.name %>
+<%= tag.h2 "Admissions: $#{@amusement_park.admission_price}.00" %>
+
+<%= tag.h2 "Rides:" %>
+<% @amusement_park.rides.alphabetical_names.each.with_index(1) do |ride, index| %>
+<%= tag.p "#{index}. #{ride}" %>
+<% end %>
+<%= tag.p "Average Thrill Rating of Rides: #{@amusement_park.rides.average_thrill_rating.round(1)}/10" %>
