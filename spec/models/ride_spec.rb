@@ -24,6 +24,10 @@ RSpec.describe Ride do
     it ".alphabetical_names" do
       expect(hershey_park.rides.alphabetical_names).to eq(["Lightning Racer", "Storm Runner", "The Great Bear"])
     end
+
+    it ".average_thrill_rating" do
+      expect(hershey_park.rides.average_thrill_rating.round(1)).to eq(7.7)
+    end
   end
 
 end
