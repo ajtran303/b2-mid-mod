@@ -21,7 +21,7 @@ RSpec.describe Ride do
     hershey_park.rides.create!(name: "Lightning Racer", thrill_rating: 5)
     hershey_park.rides.create!(name: "Storm Runner", thrill_rating: 8)
 
-    it ".alphabetical" do
+    it ".alphabetical_names" do
       expect(hershey_park.rides.alphabetical_names).to eq(["Lightning Racer", "Storm Runner", "The Great Bear"])
     end
   end
